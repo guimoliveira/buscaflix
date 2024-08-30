@@ -1,0 +1,181 @@
+:root {
+  font-family: Segoe UI,Roboto,Ubuntu,sans-serif;
+  font-size: 16px;
+
+  color: #fff;
+  background-color: #181818;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 60px 3%;
+}
+
+header {
+  background-color: #000;
+  padding: 13px 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+input {
+  background-color: #000;
+  border: 1px solid #aaa;
+  color: #fff;
+  width: 35%;
+  padding: 7px;
+}
+
+form {
+  display: contents;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-top: 2.6rem;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.row {
+  display: flex;
+  margin: 16px 0;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  min-height: 100px;
+  scroll-behavior: smooth;
+}
+
+.card {
+  width: 300px;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  background-image: url('assets/noimg.png');
+}
+
+.prev {
+  margin-top: 50px;
+  left: 0;
+  width: 3%;
+  text-align: center;
+  font-size: 2.5rem;
+  color: red;
+  cursor: pointer;
+  position: absolute;
+}
+
+.next {
+  margin-top: 50px;
+  width: 3%;
+  text-align: center;
+  right: 0;
+  font-size: 2.5rem;
+  color: red;
+  cursor: pointer;
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  background-color: rgb(22, 22, 22);
+  border: 0.0625rem solid rgba(128, 128, 128, 0.4);
+  border-radius: 0.5rem;
+  max-height: min(90%, 100% - 3rem);
+  width: 35rem;
+  max-width: 90%;
+  overflow-y: auto;
+  position: absolute;
+}
+
+.modal div {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+.modal p {
+  font-size: 1rem;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: .2rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .card {
+    width: 200px;
+  }
+}
